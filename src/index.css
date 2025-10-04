@@ -1,0 +1,60 @@
+@import 'tailwindcss';
+@plugin "daisyui";
+
+/* Theme */
+
+
+@plugin "daisyui/theme" {
+    name: "light";
+    default: false;
+    prefersdark: false;
+    color-scheme: "light";
+    --color-base-100: oklch(98% 0 0);
+    --color-base-200: oklch(96% 0.001 286.375);
+    --color-base-300: oklch(92% 0.004 286.32);
+    --color-base-content: oklch(21% 0.006 285.885);
+    --color-primary: oklch(45% 0.24 277.023);
+    --color-primary-content: oklch(98% 0.003 247.858);
+    --color-secondary: oklch(57% 0.245 27.325);
+    --color-secondary-content: oklch(98% 0.003 247.858);
+    --color-accent: #1B263B;
+    --color-accent-content: oklch(96% 0.003 264.542);
+    --color-neutral: oklch(14% 0.005 285.823);
+    --color-neutral-content: oklch(98% 0 0);
+    --color-info: oklch(71% 0.143 215.221);
+    --color-info-content: oklch(98% 0.019 200.873);
+    --color-success: oklch(70% 0.14 182.503);
+    --color-success-content: oklch(98% 0.014 180.72);
+    --color-warning: oklch(76% 0.188 70.08);
+    --color-warning-content: oklch(98% 0.022 95.277);
+    --color-error: oklch(64% 0.246 16.439);
+    --color-error-content: oklch(97% 0.014 343.198);
+    --radius-selector: 2rem;
+    --radius-field: 2rem;
+    --radius-box: 1rem;
+    --size-selector: 0.3125rem;
+    --size-field: 0.21875rem;
+    --border: 2px;
+    --depth: 0;
+    --noise: 0;
+}
+
+
+/* font */
+
+* {
+    font-family: "League Spartan";
+}
+
+/* Other Style */
+.mb {
+    @apply text-blue-700;
+}
+
+.dm {
+    @apply text-red-600;
+}
+
+.services {
+    @apply flex
+}
