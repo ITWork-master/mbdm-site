@@ -18,7 +18,7 @@ const HomeNav: React.FC<HomeNavProps> = ({ onNavigate }) => {
 
     return (
         <nav className='fixed top-4 left-1/2 -translate-x-1/2 w-auto z-50 md:block hidden'>
-            <div className='bg-white/30 backdrop-blur-md rounded-full'>
+            <div className='bg-white/40 backdrop-blur-md rounded-full'>
                 <ul className='flex'>
                     {menuItems.map((item) => (
                         <li key={item.id}>

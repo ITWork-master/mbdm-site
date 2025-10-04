@@ -46,6 +46,10 @@
     font-family: "League Spartan";
 }
 
+.footer {
+    font-family: "JetBrains Mono";
+}
+
 /* Other Style */
 .mb {
     @apply text-blue-700;
