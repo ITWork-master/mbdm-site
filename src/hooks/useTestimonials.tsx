@@ -1,21 +1,19 @@
-// src/hooks/useProduct.ts
+// src/hooks/useTestimonials.tsx
 import { useState, useCallback } from 'react';
-import { productsService } from '../services/products/products.service';
-import type { Product } from '../types/types';
+import { testimonialsService } from '../services/testimonials/testimonials.service';
+import type { TestimonialType } from '../types/types';
 
-export const useProduct = () => {
+export const useTestimonials = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
-
-    const getProducts = useCallback(async (): Promise<Product[]> => {
+    const getTestimonials = useCallback(async (): Promise<TestimonialType[]> => {
         setLoading(true);
         setError(null);
 
         try {
-            const products = await productsService.getProducts();
-
-            return products;
+            const testimonials = await testimonialsService.getTestimonials();
+            return testimonials;
         } catch (err) {
             const errorMessage = err instanceof Error ? err.message : 'Une erreur est survenue';
             setError(errorMessage);
@@ -25,31 +23,29 @@ export const useProduct = () => {
         }
     }, []);
 
-    const getProductEchantillon = useCallback(async (): Promise<Product[]> => {
-
+    const getRandomTestimonials = useCallback(async (): Promise<TestimonialType[]> => {
         setLoading(true);
         setError(null);
 
         try {
-            const products = await productsService.getRandomProducts();
-            return products;
+            const testimonials = await testimonialsService.getRandomTestimonials();
+            return testimonials;
         } catch (err) {
-            const erroMessage = err instanceof Error ? err.message : 'une erreur est survenue lors de la récupération des echantillons'
-            setError(erroMessage);
+            const errorMessage = err instanceof Error ? err.message : 'Une erreur est survenue lors de la récupération des témoignages aléatoires';
+            setError(errorMessage);
             throw err;
         } finally {
             setLoading(false);
         }
-
     }, []);
 
-    const getProductById = useCallback(async (id: string): Promise<Product> => {
+    const getTestimonialById = useCallback(async (id: string): Promise<TestimonialType> => {
         setLoading(true);
         setError(null);
 
         try {
-            const product = await productsService.getProductById(id);
-            return product;
+            const testimonial = await testimonialsService.getTestimonialById(id);
+            return testimonial;
         } catch (err) {
             const errorMessage = err instanceof Error ? err.message : 'Une erreur est survenue';
             setError(errorMessage);
@@ -67,9 +63,9 @@ export const useProduct = () => {
         loading,
         setLoading,
         error,
-        getProducts,
-        getProductEchantillon,
-        getProductById,
+        getTestimonials,
+        getRandomTestimonials,
+        getTestimonialById,
         clearError,
     };
 };

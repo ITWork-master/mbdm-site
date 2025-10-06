@@ -5,6 +5,8 @@ import Services from '../modules/Services'
 import About from '../modules/About'
 import Catalogue from '../modules/Catalogue'
 import Footer from '../modules/Footer'
+import Interventions from '../modules/InterventionsHome'
+import TestimonialsHome from '../modules/TestimonialsHome'
 
 const Home: React.FC = () => {
     return (
@@ -12,8 +14,10 @@ const Home: React.FC = () => {
             <Navbar />
             <Hero/>
             <Services/>
-            <About/>
             <Catalogue/>
+            <Interventions/>
+            <TestimonialsHome/>
+            <About/>
             <Footer/>
         </div>
     )

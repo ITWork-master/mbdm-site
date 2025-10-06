@@ -1,20 +1,19 @@
-// src/hooks/useProduct.ts
+// src/hooks/useIntervention.ts
 import { useState, useCallback } from 'react';
-import { productsService } from '../services/products/products.service';
-import type { Product } from '../types/types';
+import { interventionService } from '../services/interventions/interventions.service';
+import type { Intervention } from '../types/types';
 
-export const useProduct = () => {
+export const useIntervention = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
 
-    const getProducts = useCallback(async (): Promise<Product[]> => {
+    const getIntervention = useCallback(async (): Promise<Intervention[]> => {
         setLoading(true);
         setError(null);
 
         try {
-            const products = await productsService.getProducts();
-
+            const products = await interventionService.getIntervention();
             return products;
         } catch (err) {
             const errorMessage = err instanceof Error ? err.message : 'Une erreur est survenue';
@@ -25,13 +24,13 @@ export const useProduct = () => {
         }
     }, []);
 
-    const getProductEchantillon = useCallback(async (): Promise<Product[]> => {
+    const getInterventionEchantillon = useCallback(async (): Promise<Intervention[]> => {
 
         setLoading(true);
         setError(null);
 
         try {
-            const products = await productsService.getRandomProducts();
+            const products = await interventionService.getRandomIntervention();
             return products;
         } catch (err) {
             const erroMessage = err instanceof Error ? err.message : 'une erreur est survenue lors de la récupération des echantillons'
@@ -43,12 +42,12 @@ export const useProduct = () => {
 
     }, []);
 
-    const getProductById = useCallback(async (id: string): Promise<Product> => {
+    const getInterventionById = useCallback(async (id: string): Promise<Intervention> => {
         setLoading(true);
         setError(null);
 
         try {
-            const product = await productsService.getProductById(id);
+            const product = await interventionService.getInterventionById(id);
             return product;
         } catch (err) {
             const errorMessage = err instanceof Error ? err.message : 'Une erreur est survenue';
@@ -67,9 +66,9 @@ export const useProduct = () => {
         loading,
         setLoading,
         error,
-        getProducts,
-        getProductEchantillon,
-        getProductById,
+        getIntervention,
+        getInterventionEchantillon,
+        getInterventionById,
         clearError,
     };
 };

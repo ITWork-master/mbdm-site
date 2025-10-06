@@ -1,5 +1,6 @@
 import React from 'react'
 import { Shield, Users, Award, TrendingUp } from 'lucide-react'
+import SectionTitle from '../tools/SectionTitle'
 
 const About: React.FC = () => {
     const highlights = [
@@ -29,35 +30,30 @@ const About: React.FC = () => {
         <section id="about" className="py-5">
             <div className="max-w-6xl mx-auto px-4">
                 {/* En-tête */}
-                <div className="text-center mb-12">
-                    <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                        A propos de Nous
-                    </h1>
-                    <div className="w-20 h-1 bg-accent mx-auto mb-4"></div>
-                    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Spécialiste en matériel de froid, ventilation, thermique et climatisation
-                    </p>
-                </div>
+                <SectionTitle
+                    title='A propos de Nous'
+                    miniIntro='Spécialiste en matériel de froid, ventilation, thermique et climatisation'
+                />
 
                 {/* Contenu principal */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
                     {/* Présentation */}
                     <div>
                         <h2 className="text-2xl font-bold text-gray-900 mb-6">Notre Engagement</h2>
-                        <div className="space-y-4 text-gray-600">
+                        <div className="space-y-4 text-gray-600 text-justify">
                             <p>
-                                Depuis plus de 15 ans, nous accompagnons nos clients dans l'optimisation 
-                                de leurs installations techniques. Notre expertise couvre l'ensemble 
-                                des domaines du <strong>froid industriel</strong>, de la <strong>climatisation</strong>, 
+                                Depuis plus de 15 ans, nous accompagnons nos clients dans l'optimisation
+                                de leurs installations techniques. Notre expertise couvre l'ensemble
+                                des domaines du <strong>froid industriel</strong>, de la <strong>climatisation</strong>,
                                 de la <strong>ventilation technique</strong> et des <strong>systèmes thermiques</strong>.
                             </p>
                             <p>
-                                De l'installation à la maintenance, en passant par la réparation 
-                                et le dépannage d'urgence, nous mettons à votre service notre 
+                                De l'installation à la maintenance, en passant par la réparation
+                                et le dépannage d'urgence, nous mettons à votre service notre
                                 savoir-faire et notre réactivité.
                             </p>
                             <p>
-                                Notre philosophie : des solutions durables, performantes et 
+                                Notre philosophie : des solutions durables, performantes et
                                 adaptées à vos besoins spécifiques.
                             </p>
                         </div>

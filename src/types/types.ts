@@ -15,3 +15,23 @@ export interface Product {
     created_at: string;
     updated_at: string | null;
 }
+
+export interface Intervention {
+    id: string;
+    user_id: string;
+    title: string;
+    description: string;
+    image_url: string | null;
+    created_at: string;
+    updated_at: string | null;
+}
+
+export interface TestimonialType {
+    id : string;
+    userid: string;
+    client_name : string;
+    message : string;
+    company : string | null;
+    created_at : string;
+    updated_at : string | null;
+}

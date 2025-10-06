@@ -3,6 +3,7 @@ import CatalogueContainer from '../tools/CatalogueContainer'
 import { useProduct } from '../../hooks/useProducts'
 import CatalogueCard from '../tools/CatalogueCard';
 import type { Product } from '../../types/types';
+import SectionTitle from '../tools/SectionTitle';
 
 const Catalogue: React.FC = () => {
 
@@ -62,15 +63,10 @@ const Catalogue: React.FC = () => {
         <section id="about" className="py-5">
             <div className="max-w-6xl mx-auto px-4">
                 {/* En-tête */}
-                <div className="text-center mb-12">
-                    <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                        Catalogues
-                    </h1>
-                    <div className="w-20 h-1 bg-accent mx-auto mb-4"></div>
-                    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Découvrez notre sélection de matériels professionnels à vendre, soigneusement classés pour répondre à vos besoins.
-                    </p>
-                </div>
+                <SectionTitle
+                    title='Catalogues'
+                    miniIntro='Découvrez notre sélection de matériels professionnels à vendre, soigneusement classés pour répondre à vos besoins.'
+                />
 
                 {/* Contenu principal */}
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-7 mb-12">

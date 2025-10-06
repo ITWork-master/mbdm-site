@@ -4,13 +4,16 @@ import heroImg from './../../assets/images/heroImage.png'
 const Hero: React.FC = () => {
     return (
         <div className='flex flex-col justify-center items-center w-full mx-auto'>
-            <div className='py-8 w-max'>
-                <div className='hero-title text-3xl md:text-4xl font-extrabold'>
-                    <span className='mb'>M</span>aintenance et <span className='mb'>B</span>onne <span className='dm'>D</span>istribution des <span className='dm'>M</span>atériels
+            <div className='py-6 md:py-8 lg:py-12 w-3/4 max-w-4xl text-center'>
+                <div className='hero-title text-2xl sm:text-3xl md:text-4xl font-extrabold leading-tight'>
+                    <span className='mb'>M</span>aintenance et{' '}
+                    <span className='mb'>B</span>onne{' '}
+                    <span className='dm'>D</span>istribution des{' '}
+                    <span className='dm'>M</span>atériels
                 </div>
             </div>
-            <div className='relative w-6/8'>
-                <div className='hero-img w-7/9 mx-auto'>
+            <div className='relative md:w-6/8 my-10 w-9/10 md:my-0'>
+                <div className='hero-img md:w-7/9 w-10/12 mx-auto'>
                     <img
                         src={heroImg}
                         alt="Service Representation"
