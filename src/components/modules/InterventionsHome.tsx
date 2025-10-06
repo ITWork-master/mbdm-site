@@ -74,7 +74,7 @@ const Interventions: React.FC = () => {
                         onClick={() => setView("intervention")}
                         className="btn btn-primary btn-lg"
                     >
-                        Voir toutes nos réalisations
+                        Voir toutes nos interventions
                     </button>
                 </div>
             )}

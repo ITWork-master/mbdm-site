@@ -3,7 +3,7 @@ import React from 'react';
 import { useApp } from '../../context/PageContext';
 import Home from '../view/Home';
 import Testimonials from '../view/Testimonials';
-import Interventions from '../modules/InterventionsHome';
+import Interventions from '../view/Interventions';
 import Products from '../view/Products';
 
 const ViewContainer: React.FC = () => {
