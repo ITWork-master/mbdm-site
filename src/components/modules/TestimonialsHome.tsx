@@ -3,7 +3,6 @@ import { useTestimonials } from '../../hooks/useTestimonials';
 import type { TestimonialType } from '../../types/types';
 import TestimonialsCard from '../tools/TestimonialsCard';
 import SectionTitle from '../tools/SectionTitle';
-import { useApp } from '../../context/PageContext';
 
 const TestimonialsHome: React.FC = () => {
     const [testimonials, setTestimonials] = useState<TestimonialType[]>([]);
@@ -15,7 +14,6 @@ const TestimonialsHome: React.FC = () => {
 
     const carouselRef = useRef<HTMLDivElement>(null);
     const { getTestimonials } = useTestimonials();
-    const { setView } = useApp();
 
     const loadTestimonials = async () => {
         try {
@@ -31,6 +29,7 @@ const TestimonialsHome: React.FC = () => {
     };
 
     useEffect(() => {
+        console.log(scrollLeft);        
         loadTestimonials();
     }, []);
 
