@@ -4,6 +4,7 @@ import type { Intervention } from '../../types/types';
 import InterventionCard from '../tools/InterventionCard';
 import SectionTitle from '../tools/SectionTitle';
 import { useApp } from '../../context/PageContext';
+import { ChevronRight } from 'lucide-react';
 
 const Interventions: React.FC = () => {
     const [echantillons, setEchantillons] = useState<Intervention[]>([])
@@ -69,12 +70,13 @@ const Interventions: React.FC = () => {
 
             {/* Bouton pour voir plus (optionnel) */}
             {hasEchantillons && (
-                <div className="text-center mt-12">
+                <div className="w-max mx-auto mt-10">
                     <button
                         onClick={() => setView("intervention")}
-                        className="btn btn-primary btn-lg"
+                        className="btn btn-accent flex"
                     >
-                        Voir toutes nos interventions
+                        <p>Voir les autres interventions</p>
+                        <ChevronRight/>
                     </button>
                 </div>
             )}

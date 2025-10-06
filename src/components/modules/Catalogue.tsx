@@ -4,6 +4,8 @@ import { useProduct } from '../../hooks/useProducts'
 import CatalogueCard from '../tools/CatalogueCard';
 import type { Product } from '../../types/types';
 import SectionTitle from '../tools/SectionTitle';
+import { useApp } from '../../context/PageContext';
+import { ChevronRight } from 'lucide-react';
 
 const Catalogue: React.FC = () => {
 
@@ -12,6 +14,7 @@ const Catalogue: React.FC = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const { getProductEchantillon } = useProduct();
+    const { setView } = useApp();
 
     const loadEchantillons = async () => {
         try {
@@ -99,7 +102,7 @@ const Catalogue: React.FC = () => {
                 </div>
 
                 {/* Section Échantillons avec Carousel Automatique */}
-                <div className="mb-12">
+                <div className="">
                     <div className="text-center mb-8">
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
                             Nos Produits en Vedette
@@ -135,6 +138,17 @@ const Catalogue: React.FC = () => {
                             )}
                         </div>
                     </div>
+                </div>
+
+                {/* Button pour voir tout les produits */}
+                <div className='w-max mx-auto mt-10'>
+                    <button
+                        onClick={() => setView("products")}
+                        className='btn btn-accent flex'
+                    >
+                        <p>Voir tous les produits</p>
+                        <ChevronRight/>
+                    </button>
                 </div>
             </div>
         </section>
