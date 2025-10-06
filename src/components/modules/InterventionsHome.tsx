@@ -56,20 +56,13 @@ const Interventions: React.FC = () => {
                 ) : (
                     <div className="max-w-6xl mx-auto space-y-12">
                         {/* Premier échantillon - image à gauche */}
-                        {echantillons[0] && (
+                        {echantillons.map((intervention, index) => (
                             <InterventionCard
-                                intervention={echantillons[0]}
-                                flexDisposition="flex-row"
+                                key={intervention.id || index}
+                                intervention={intervention}
+                                imageOnRight={index % 2 !== 0} // Alternance automatique
                             />
-                        )}
-
-                        {/* Deuxième échantillon - image à droite */}
-                        {echantillons[1] && (
-                            <InterventionCard
-                                intervention={echantillons[1]}
-                                flexDisposition="flex-row-reverse"
-                            />
-                        )}
+                        ))}
                     </div>
                 )}
             </div>

@@ -84,8 +84,8 @@ const Services: React.FC = () => {
     };
 
     return (
-        <section id="services" className="py-20 px-4 bg-gradient-to-b ">
-            <div className="max-w-7xl mx-auto">
+        <section id="services" className="py-5">
+            <div className="max-w-6xl mx-auto px-4">
                 {/* En-tête */}
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">

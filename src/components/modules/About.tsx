@@ -36,9 +36,9 @@ const About: React.FC = () => {
                 />
 
                 {/* Contenu principal */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 px-4 mb-12">
                     {/* Présentation */}
-                    <div>
+                    <div className=''>
                         <h2 className="text-2xl font-bold text-gray-900 mb-6">Notre Engagement</h2>
                         <div className="space-y-4 text-gray-600 text-justify">
                             <p>
@@ -60,7 +60,7 @@ const About: React.FC = () => {
                     </div>
 
                     {/* Points forts */}
-                    <div>
+                    <div className=''>
                         <h2 className="text-2xl font-bold text-gray-900 mb-6">Pourquoi Nous Choisir ?</h2>
                         <div className="space-y-6">
                             {highlights.map((item, index) => {
@@ -88,7 +88,7 @@ const About: React.FC = () => {
                 </div>
 
                 {/* Chiffres */}
-                <div className="bg-accent rounded-2xl p-8 shadow-lg border border-gray-200">
+                <div className="bg-accent rounded-2xl p-8 shadow-lg border border-gray-200 mx-4">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                         <div>
                             <div className="text-2xl md:text-3xl font-bold text-accent-content mb-1">15+</div>
