@@ -7,6 +7,7 @@ import Catalogue from '../modules/Catalogue'
 import Footer from '../modules/Footer'
 import Interventions from '../modules/InterventionsHome'
 import TestimonialsHome from '../modules/TestimonialsHome'
+import Contact from '../modules/Contact'
 
 const Home: React.FC = () => {
     return (
@@ -18,6 +19,7 @@ const Home: React.FC = () => {
             <Interventions/>
             <TestimonialsHome/>
             <About/>
+            <Contact/>
             <Footer/>
         </div>
     )
