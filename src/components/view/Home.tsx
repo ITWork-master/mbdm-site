@@ -8,6 +8,7 @@ import Footer from '../modules/Footer'
 import Interventions from '../modules/InterventionsHome'
 import TestimonialsHome from '../modules/TestimonialsHome'
 import Contact from '../modules/Contact'
+import Location from '../modules/Location'
 
 const Home: React.FC = () => {
     return (
@@ -20,6 +21,7 @@ const Home: React.FC = () => {
             <TestimonialsHome/>
             <About/>
             <Contact/>
+            <Location/>
             <Footer/>
         </div>
     )
