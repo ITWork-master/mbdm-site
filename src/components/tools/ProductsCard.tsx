@@ -22,7 +22,7 @@ const ProductsCard: React.FC<ProductsCardProps> = ({ product }) => {
                     <div className='text-xs uppercase'>
                         {product?.type}
                     </div>
-                    <h2 className='font-extrabold text-lg'>
+                    <h2 className='font-bold text-xl'>
                         {product?.title}
                     </h2>
                     <p className='text-sm'>

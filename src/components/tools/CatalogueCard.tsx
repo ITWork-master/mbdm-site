@@ -25,13 +25,13 @@ const CatalogueCard: React.FC<CatalogueCardProps> = ({ product }) => {
 
             {/* Badge */}
             <div className="mb-2">
-                <span className="badge badge-info badge-sm capitalize font-medium">
+                <span className="badge badge-accent badge-outline badge-sm capitalize font-medium">
                     {product.type}
                 </span>
             </div>
 
             {/* Title */}
-            <h3 className="font-semibold text-lg mb-2 line-clamp-2 group-hover:text-primary transition-colors flex-grow-0">
+            <h3 className="font-semibold text-lg mb-2 line-clamp-2 transition-colors flex-grow-0">
                 {product.title}
             </h3>
 

@@ -18,7 +18,7 @@ export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
     const [state, setState] = useState<AppState>({
         isLoading: false,
         currentView: 'home',
-        history: ['home'], // Historique initial
+        history: ['home'], 
     });
 
     const setLoading = (loading: boolean) => {
