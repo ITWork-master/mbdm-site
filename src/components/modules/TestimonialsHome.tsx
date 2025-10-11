@@ -124,7 +124,7 @@ const TestimonialsHome: React.FC = () => {
     const hasTestimonials = testimonials.length > 0;
 
     return (
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-base-100">
+        <section className="px-4 sm:px-6 lg:px-8 bg-base-100">
             <div className="max-w-7xl mx-auto px-4">
                 <SectionTitle
                     title='Ils nous font confiance'
@@ -229,6 +229,7 @@ const TestimonialsHome: React.FC = () => {
                     </div>
                 )} */}
             </div>
+            <div id='about-link' className='pt-20'></div>
         </section>
     );
 };

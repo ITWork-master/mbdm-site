@@ -63,7 +63,7 @@ const Catalogue: React.FC = () => {
     const visibleCards = getVisibleCards();
 
     return (
-        <section id="about" className="py-5">
+        <section id="catalog" className="">
             <div className="max-w-6xl mx-auto px-4">
                 {/* En-tête */}
                 <SectionTitle
@@ -150,6 +150,7 @@ const Catalogue: React.FC = () => {
                         <ChevronRight/>
                     </button>
                 </div>
+                <div id='interventions-link' className='pt-20'></div>
             </div>
         </section>
     )

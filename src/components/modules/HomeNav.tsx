@@ -1,33 +1,39 @@
 import React from 'react';
 
-interface HomeNavProps {
-    onNavigate?: (section: string) => void;
-}
-
-const HomeNav: React.FC<HomeNavProps> = ({ onNavigate }) => {
+const HomeNav: React.FC = () => {
     const menuItems = [
-        { id: 'about', label: 'À propos' },
-        { id: 'services', label: 'Services' },
-        { id: 'catalog', label: 'Catalogue' },
-        { id: 'interventions', label: 'Interventions' },
+        { id: 'about-link', label: 'À propos' },
+        { id: 'services-link', label: 'Services' },
+        { id: 'catalog-link', label: 'Catalogue' },
+        { id: 'interventions-link', label: 'Interventions' },
     ];
 
-    const handleClick = (itemId: string) => {
-        onNavigate?.(itemId);
+    // Fonction pour le smooth scroll
+    const handleSmoothScroll = (event: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+        event.preventDefault();
+        
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
     };
 
     return (
         <nav className='fixed top-4 left-1/2 -translate-x-1/2 w-auto z-50 md:block hidden'>
-            <div className='bg-white/40 backdrop-blur-md rounded-full'>
-                <ul className='flex'>
+            <div className='backdrop-blur-md rounded-full'>
+                <ul className='flex items-center h-12'>
                     {menuItems.map((item) => (
                         <li key={item.id}>
-                            <button
-                                onClick={() => handleClick(item.id)}
-                                className='rounded-full text-md py-3 px-5 bg-transparent border-0'
+                            <a
+                                href={`#` + item.id}
+                                className='rounded-full text-md p-4 border-0 hover:bg-gray-100 transition-colors duration-200'
+                                onClick={(e) => handleSmoothScroll(e, item.id)}
                             >
                                 {item.label}
-                            </button>
+                            </a>
                         </li>
                     ))}
                 </ul>

@@ -32,7 +32,7 @@ const Interventions: React.FC = () => {
     const hasEchantillons = echantillons.length > 0;
 
     return (
-        <section className="py-8 px-4 sm:px-6 lg:px-8 bg-base-100">
+        <section id='interventions' className="px-4 sm:px-6 lg:px-8 bg-base-100">
             {/* En-tête */}
             <SectionTitle
                 title='Réalisations et Palmarès'
@@ -80,6 +80,7 @@ const Interventions: React.FC = () => {
                     </button>
                 </div>
             )}
+            <div className='pt-20'></div>
         </section>
     )
 }

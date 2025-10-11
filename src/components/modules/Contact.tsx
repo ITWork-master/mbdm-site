@@ -88,7 +88,7 @@ const Contact: React.FC = () => {
     }
 
     return (
-        <section id='contact' className='mt-10 py-12 bg-base-100'>
+        <section id='contact' className='bg-base-100'>
             <div className="container mx-auto px-4">
                 <SectionTitle
                     title='Contactez-nous !'

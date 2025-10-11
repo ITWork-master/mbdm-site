@@ -14,15 +14,17 @@ const Home: React.FC = () => {
     return (
         <div className='overflow-clip'>
             <Navbar />
-            <Hero/>
-            <Services/>
-            <Catalogue/>
-            <Interventions/>
-            <TestimonialsHome/>
-            <About/>
-            <Contact/>
-            <Location/>
-            <Footer/>
+            <div className='pt-20 sm:pt-0'>
+                <Hero />
+                <Services />
+                <Catalogue />
+                <Interventions />
+                <TestimonialsHome />
+                <About />
+                <Contact />
+                <Location />
+                <Footer />
+            </div>
         </div>
     )
 }

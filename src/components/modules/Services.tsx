@@ -84,7 +84,7 @@ const Services: React.FC = () => {
     };
 
     return (
-        <section id="services" className="py-5">
+        <section id="services" className="">
             <div className="max-w-6xl mx-auto px-4">
                 {/* En-tête */}
                 <div className="text-center mb-16">
@@ -170,6 +170,7 @@ const Services: React.FC = () => {
                         thermique et climatisation, nous garantissons des interventions de qualité et des solutions durables.
                     </p>
                 </div>
+                <div id='catalog-link' className='pt-20'></div>
             </div>
         </section>
     )

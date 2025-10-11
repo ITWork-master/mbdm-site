@@ -25,7 +25,7 @@ const TestimonialsCard: React.FC<TestimonialsCardProps> = ({ testimonial }) => {
                     </p>
 
                     {/* Auteur */}
-                    <div className="flex items-center justify-center gap-4">
+                    <div className="flex items-center justify-center gap-4 py-5">
                         <div className="text-center">
                             <h4 className="font-semibold text-base-content">
                                 {testimonial.client_name}

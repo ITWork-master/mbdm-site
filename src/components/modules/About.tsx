@@ -27,7 +27,7 @@ const About: React.FC = () => {
     ]
 
     return (
-        <section id="about" className="py-5">
+        <section id="about" className="">
             <div className="max-w-6xl mx-auto px-4">
                 {/* En-tête */}
                 <SectionTitle
@@ -109,6 +109,7 @@ const About: React.FC = () => {
                     </div>
                 </div>
             </div>
+            <div id='contact-link' className='pt-20'></div>
         </section>
     )
 }
