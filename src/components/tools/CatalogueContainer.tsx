@@ -12,7 +12,7 @@ const CatalogueContainer: React.FC<CatalogueContainerProps> = ({ catNumber, catT
             <div className='text-7xl py-5 text-base-content/40'>
                 {catNumber}
             </div>
-            <div className='uppercase font-extrabold sm:text-2xl text-xl'>
+            <div className='uppercase font-extrabold sm:text-2xl text-lg'>
                 {catTitle}
             </div>
             <div className='text-sm text-base-content/60'>
