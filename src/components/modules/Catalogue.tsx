@@ -66,10 +66,14 @@ const Catalogue: React.FC = () => {
         <section id="catalog" className="">
             <div className="max-w-6xl mx-auto px-4">
                 {/* En-tête */}
-                <SectionTitle
-                    title='Catalogues'
-                    miniIntro='Découvrez notre sélection de matériels professionnels à vendre, soigneusement classés pour répondre à vos besoins.'
-                />
+                <div
+                    onClick={() => setView("products")}
+                >
+                    <SectionTitle
+                        title='Catalogues'
+                        miniIntro='Découvrez notre sélection de matériels professionnels à vendre, soigneusement classés pour répondre à vos besoins.'
+                    />
+                </div>
 
                 {/* Contenu principal */}
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-7 mb-12">
@@ -147,7 +151,7 @@ const Catalogue: React.FC = () => {
                         className='btn btn-accent flex'
                     >
                         <p>Voir tous les produits</p>
-                        <ChevronRight/>
+                        <ChevronRight />
                     </button>
                 </div>
                 <div id='interventions-link' className='pt-20'></div>
