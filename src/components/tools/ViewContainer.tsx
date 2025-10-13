@@ -1,5 +1,5 @@
 // components/ViewContainer.tsx
-import React from 'react';
+import React, { useState } from 'react';
 import { useApp } from '../../context/PageContext';
 import Home from '../view/Home';
 import Testimonials from '../view/Testimonials';
@@ -8,6 +8,8 @@ import Products from '../view/Products';
 
 const ViewContainer: React.FC = () => {
     const { currentView } = useApp();
+
+    // const [prodLabel, setProdLabel] = useState('Tous les produits');
 
     const renderView = () => {
         switch (currentView) {

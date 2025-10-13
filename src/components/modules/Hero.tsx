@@ -12,15 +12,15 @@ const Hero: React.FC = () => {
                     <span className='dm'>M</span>atériels
                 </div>
             </div>
-            <div className='relative md:w-6/8 my-10 w-9/10 md:my-0 transform translate-y-10 sm:translate-y-0'>
-                <div className='hero-img md:w-7/9 w-10/12 mx-auto'>
+            <div className='relative md:w-5/8 my-5 w-9/10 md:my-0 transform sm:translate-y-0'>
+                <div className='hero-img'>
                     <img
                         src={heroImg}
                         alt="Service Representation"
                         className='rounded-t-2xl'
                     />
                 </div>
-                <div className='hero-img-back rounded-2xl -z-10 bg-stone-300 h-3/5 absolute bottom-0 w-full'></div>
+                
             </div>
             <div id='services-link' className='pt-20'></div>
         </div>

@@ -18,12 +18,12 @@ const Navbar: React.FC = () => {
     const handleSmoothScroll = (event: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
         event.preventDefault()
         closeDropdown()
-        
+
         if (targetId === 'top') {
             scrollToTop()
             return
         }
-        
+
         const targetElement = document.getElementById(targetId)
         if (targetElement) {
             targetElement.scrollIntoView({
@@ -82,10 +82,20 @@ const Navbar: React.FC = () => {
             <div className='fixed z-20 sm:relative'>
                 <div className="navbar bg-base-100 w-screen">
                     <div className='flex justify-between w-full items-center py-4'>
-                        <div className="">
-                            <div className="text-2xl px-5">
-                                <span className='text-blue-700'>MB</span>
-                                <span className='text-red-500'>DM</span>
+                        <div className="opacity-0 w-1/4 md:w-max md:opacity-100">
+                            <div className="text-2xl px-5 space-x-4 font-extrabold">
+                                <span className='text-blue-700'>M</span>
+                                <span className='text-blue-700'>B</span>
+                                <span className='text-red-500'>D</span>
+                                <span className='text-red-500'>M</span>
+                            </div>
+                        </div>
+                        <div className="flex-1 md:opacity-0">
+                            <div className="text-2xl px-5 space-x-4 font-extrabold">
+                                <span className='text-blue-700'>M</span>
+                                <span className='text-blue-700'>B</span>
+                                <span className='text-red-500'>D</span>
+                                <span className='text-red-500'>M</span>
                             </div>
                         </div>
 
@@ -94,15 +104,15 @@ const Navbar: React.FC = () => {
                             <HomeNav />
                         </div>
                         <div className='hidden md:block mr-5'>
-                            <a 
-                                href="#contact-link" 
+                            <a
+                                href="#contact-link"
                                 className='btn btn-accent'
                                 onClick={(e) => handleSmoothScroll(e, 'contact')}
                             >
                                 Contact
                             </a>
                         </div>
-                        
+
                         {/* Bouton dropdown mobile - visible sur les petits écrans */}
                         <div className="md:hidden pr-5" ref={dropdownRef}>
                             <div className="dropdown dropdown-end">
@@ -166,17 +176,17 @@ const Navbar: React.FC = () => {
                     className="fixed z-50 bottom-8 right-8 btn btn-circle btn-accent border-base-200 shadow-lg hover:shadow-xl transition-all duration-300"
                     aria-label="Retour en haut de la page"
                 >
-                    <svg 
-                        className="w-6 h-6" 
-                        fill="none" 
-                        stroke="currentColor" 
+                    <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
                         viewBox="0 0 24 24"
                     >
-                        <path 
-                            strokeLinecap="round" 
-                            strokeLinejoin="round" 
-                            strokeWidth={2} 
-                            d="M5 15l7-7 7 7" 
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M5 15l7-7 7 7"
                         />
                     </svg>
                 </button>
