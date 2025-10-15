@@ -7,7 +7,7 @@ const About: React.FC = () => {
         {
             icon: Award,
             title: 'Expertise Confirmée',
-            description: '15 ans d\'expérience dans les domaines techniques spécialisés'
+            description: '6 ans d\'expérience dans les domaines techniques spécialisés'
         },
         {
             icon: Users,
@@ -42,7 +42,7 @@ const About: React.FC = () => {
                         <h2 className="text-2xl font-bold text-gray-900 mb-6">Notre Engagement</h2>
                         <div className="space-y-4 text-gray-600 text-justify">
                             <p>
-                                Depuis plus de 15 ans, nous accompagnons nos clients dans l'optimisation
+                                Depuis 2019, nous accompagnons nos clients dans l'optimisation
                                 de leurs installations techniques. Notre expertise couvre l'ensemble
                                 des domaines du <strong>froid industriel</strong>, de la <strong>climatisation</strong>,
                                 de la <strong>ventilation technique</strong> et des <strong>systèmes thermiques</strong>.
@@ -51,10 +51,6 @@ const About: React.FC = () => {
                                 De l'installation à la maintenance, en passant par la réparation
                                 et le dépannage d'urgence, nous mettons à votre service notre
                                 savoir-faire et notre réactivité.
-                            </p>
-                            <p>
-                                Notre philosophie : des solutions durables, performantes et
-                                adaptées à vos besoins spécifiques.
                             </p>
                         </div>
                     </div>
@@ -91,11 +87,11 @@ const About: React.FC = () => {
                 <div className="bg-accent rounded-2xl p-8 shadow-lg border border-gray-200 mx-4">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                         <div>
-                            <div className="text-2xl md:text-3xl font-bold text-accent-content mb-1">15+</div>
+                            <div className="text-2xl md:text-3xl font-bold text-accent-content mb-1">6+</div>
                             <div className="text-sm text-gray-300">Ans d'expérience</div>
                         </div>
                         <div>
-                            <div className="text-2xl md:text-3xl font-bold text-accent-content mb-1">500+</div>
+                            <div className="text-2xl md:text-3xl font-bold text-accent-content mb-1">900+</div>
                             <div className="text-sm text-gray-300">Clients satisfaits</div>
                         </div>
                         <div>

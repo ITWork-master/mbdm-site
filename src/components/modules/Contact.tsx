@@ -17,12 +17,12 @@ const Contact: React.FC = () => {
             icon: PhoneCall,
             content: (
                 <>
-                    +261 38 73 642 27<br />
+                    +261 34 94 314 81<br />
                     +261 32 80 155 24<br />
                     +216 34 18 613 68
                 </>
             ),
-            link: "tel:+261387364227"
+            link: "tel:+261349431481"
         },
         {
             id: "facebook",
@@ -167,15 +167,11 @@ const Contact: React.FC = () => {
                         <h3 className="text-xl font-semibold text-base-content mb-4">
                             Horaires d'ouverture
                         </h3>
-                        <div className="bg-base-100 rounded-lg shadow-md p-6 max-w-2xl mx-auto border-2 border-accent-content">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-base-content/80">
+                        <div className="bg-base-100 rounded-lg shadow-md p-6 max-w-md mx-auto border-2 border-accent-content">
+                            <div className="grid grid-cols-1 text-base-content/80">
                                 <div>
-                                    <p className="font-medium text-base-content">Lundi - Vendredi</p>
-                                    <p>08:00 - 17:00</p>
-                                </div>
-                                <div>
-                                    <p className="font-medium text-base-content">Samedi</p>
-                                    <p>08:00 - 12:00</p>
+                                    <p className="font-medium text-base-content">Lundi - Samedi</p>
+                                    <p>07:30 - 17:30</p>
                                 </div>
                             </div>
                         </div>
