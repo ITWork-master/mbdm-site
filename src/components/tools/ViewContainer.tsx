@@ -1,5 +1,5 @@
 // components/ViewContainer.tsx
-import React, { useState } from 'react';
+import React from 'react';
 import { useApp } from '../../context/PageContext';
 import Home from '../view/Home';
 import Testimonials from '../view/Testimonials';
